@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font roboto and poppins ad lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- flowbite cdn -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'roboto': ['Roboto', 'sans-serif'],
+                    'poppins': ['Poppins', 'sans-serif'],
+                    'lato': ['Lato', 'sans-serif']
+                },
+
+                extend: {
+                    colors: {
+                        pureWhite: '#ffffff',
+                        pureBlack: '#181818',
+                        light: '#fafafa',
+                        green: '#2daf5d',
+                        darkGreen: '#2e6541',
+                        lightGrenn: '#55f08c',
+                        grey: '#55f08c',
+                        darkgrey: '#5d5d5d'
+                    },
+                    backgroundImage: (theme) => ({
+
+                        footer_bg: "linear-gradient(to right bottom, rgba('#7ed56f',0.8), rgba('#28b485',0.8)) url('./images/footer__bg.webp')",
+                    }),
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#fafafa]">
+    <div
+        class="top-container bg-[#fafafa] z-10 px-[5%] md:px-[8%] relative before:content-[''] before:block before:absolute before:-z-10 before:top-[-20%] before:left-[-4%] before:-translate-y-50 before:-translate-x-50 before:bg-[#fef5e5] before:w-[300px] before:h-[300px] md:before:w-[500px] md:before:h-[500px] before:rounded-[50%] before:blur-xl overflow-x-hidden">
+
+        <!-- navbar -->
+
+        <nav class="border-gray-200 py-3.5 md:py-5">
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="https://flowbite.com/" class="flex items-center">
+                    <span class="self-center text-2xl font-bold whitespace-nowrap">CELLA</span>
+                </a>
+                <div class="flex md:hidden md:order-2">
+                    <button data-collapse-toggle="navbar-cta" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100"
+                        aria-controls="navbar-cta" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                    <ul
+                        class="flex md:items-center flex-col p-4 mt-4 rounded-lg border border-gray-100 md:flex-row md:space-x-14 md:mt-0 md:text-sm md:font-medium">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-pureBlack font-medium text-lg    rounded md:bg-transparent hover:text-green  md:p-0"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-pureBlack font-medium text-lg    rounded md:bg-transparent hover:text-green  md:p-0"
+                                aria-current="page">Product</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-pureBlack font-medium text-lg    rounded md:bg-transparent hover:text-green  md:p-0"
+                                aria-current="page">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-pureBlack font-medium text-lg    rounded md:bg-transparent hover:text-green  md:p-0"
+                                aria-current="page">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block mt-4 md:mt-0 text-pureBlack border-2 border-[#989898] focus:ring-blue-300 font-medium rounded-[30px] text-lg  py-3 px-5 text-center md:mr-0">Get
+                                started</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- hero section -->
+
+        <section class="flex flex-wrap md:flex-nowrap justify-center md:justify-between  gap-12  lg:item-center mt-4">
+            <div class="z-10">
+                <img src="data:image/webp;base64,UklGRtgEAABXRUJQVlA4WAoAAAAQAAAAPAAAPAAAQUxQSIwBAAABkCIAkBo4c6RYsaJiVD1GlSGqqFgxRRU9RpWiDhXTqlJUKapMCqOOVh1NYXHmAxExAeA16P/4KAS2/YiYsYkREeUmLs//w5TLpKJYy+MEqvt4jGjesNguNbKVQz/qr3P4aPCcwfY5AzxB7y6aCnLBd6OCXCean6CWW4wQq5AWMqJ1HW37aWVWH0mdReu5kFJmh52ELqHLG1Q29c05wXQ7gTD9iO6LkcDP8f4C/U72n3B24lGBFCdF7CC4/hzp5teXG63pezOJtOfydLlqT+d35Pi9MwJYLpCtfB4myPmRYPUmmePUB/2MRpYDxNkki+/iBKjPijlicyMn6sA0GvlOqBAR2EfpNxLfkhAcL+98Iz3N5Wk9+KyMn3vILrWC/7OP5tzkh4DoQRdzl4Bu7qAfCJ9wEFGC51YfgXRs1UmrZdJCBrQgtxgB4p0WJ6jVfzOaBPJ3jTJ6oVFMD74bZMBwxOASh2hOI5dzgBHNG2B5QpPyqJhUFAEPyBSdwDRWbOcCfYgogG1lIpLlfgBWUDggJgMAAPAUAJ0BKj0APQA+IQyEQiGG/AYAgS2AGSGgB1CU9+X/hz+QHTlbQ9nf21/xeXZ+Ffn/+0+3TtAeYB+lP+o6iPmA/XL9pOwt6AH9L/w/WjegB5Z3sg/uN6S+YgdnX2q/sA4IPF9EDhw/u3gDGAMw75X/pPYK6PTR7eWCQir5FySCgjHCkwz1mvgMo+zSxUN2aoPauFOEC/+mQn1ooNpdOAG/72U52o6mAljdwWZL8CiYAP7/o967wFbTEujh9bpGeZ00rbsC3I0Pt4CrpvbIj5lh4ERHr/5etVrVwxMZQjnnJakd6Y5MliF25Qs9/otnHnmpn6QJS+rWr5fSqcViywjdfntSVKY253vYY0G62opWjLBR7E+w1pBC0Mq+bNi/DdyuRz/jP8Ej9PjSzU8C42zG88dcs5LoEhRzkgJQ9SUQAcwy576uNGE1QoISl/7vB0WixH4D88W6cMhAW1p+LWvNZKnZB7Q5AR7cnw7/TVXHZYsj1LDdhnW7w+KJFLNE/ycV1L+ke75HzmK+yLS6UN5J/gDAjf5yDp9VAisy0FV9/II4u9/1tD2cjd0is4TBfB2ynwXsq23xDMJhCymmE82lL2UTsUt3o9h64GX/pL413NQp3nz+TlgBlJpMG0gWbcjCK5mWuHZJs1TGVAsa9Ji3/WBj135pjHessFSiIrQPN3EsOy0KgjgMwBfz7mA6nioxknHrdakGTFaoDHO6tLHlFQGtDwKFrTE3fhLosiBIPAatt/Dw+ypD7UdOjz85XrJn3N2/vsWNrLB12hDiVC0+aPWrN7vkjXHNSzJTtC5Y/Z9kHx4xR0ooQBU+sQrvAspe1WrhD03AuV5Na2DzPzC58QRWZbDUNz/JwIuxXTNFHZvnCmTxC9OqrUOb0e2lxPkdozS5RhVLSy/t4sxDYAIZSaYC4hYvI5fsKuNbXS5Vcw6UhKo4udHQBw7A61ek5WbTgKDhMXzBG3MVxhL9DEUg7N4dTpYuSQPpIFy5nUhVEdDcbD0rdividx/6y68wLyg7Wf5edwhA2BxeOWuced5oDukEKxiKhxjYO70j9DINCeLuhgAA" class="block ml-[80%] lg:ml-[120%] md:mt-8 w-8 md:w-auto" alt="">
+                <h1
+                    class="text-4xl text-center md:text-start sm:leading-[4rem] md:text-[5rem] md:leading-[5rem]  font-bold font-poppins font-[#212121]">
+                    We Are Cella <br> Agriculture
+                </h1>
+
+                <h3 class="font-lato text-center md:text-2xl font-[#3c3c3c] font-bold mt-8">we belives Future of Food is
+                    here</h3>
+
+                <div
+                    class="w-full bg-[#fafafa] mt-14 rounded-[40px]  shadow-xl shadow-slate-800/10 flex flex-none justify-between items-center">
+                    <input type="text" name="search" placeholder="What are you looking for?"
+                        class="border-none w-[100%] px-4 py-4 md:px-12 md:py-5 rounded-[50px] text-[#6b6b6b] font-medium bg-[#fafafa] placeholder:text-[#6b6b6b] placeholder:font-medium focus:ring-0">
+                    <button class="bg-green text-white px-6 py-4  md:px-12 md:py-5 rounded-[50px]">Search</button>
+                </div>
+
+
+                <div class=" mt-12 md:mt-[7rem] bg-transparent">
+                    <div class="flex items-center justify-center flex-wrap gap-3 bg-transparent">
+                        <div
+                            class="w-16 h-16 md:w-20 md:h-20 bg-cover bg-center bg-[url('./images/profile_1.webp')] rounded-full border-4 border-white z-10">
+                        </div>
+                        <div
+                            class="-ml-10 w-16 h-16 md:w-20 md:h-20 bg-cover bg-center bg-[url('./images/profile_2.webp')] rounded-full border-4 border-white z-10">
+                        </div>
+                        <div
+                            class="-ml-10 w-16 h-16 md:w-20 md:h-20 bg-cover bg-center bg-[url('./images/profile_3.webp')] rounded-full border-4 border-white z-10">
+                        </div>
+
+                        <div class="ml-9 w-16 h-16 bg-cover bg-center bg-[url('./images/start.webp')]  z-10">
+                        </div>
+
+                        <div class="ml-5">
+                            <span class="text-md font-lato text-[#727272]">Join our community</span><br>
+                            <span class="text-md font-lato font-bold text-[#696a6a]">We're waiting for you</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <img src="/assets/green_leaves.fd66e9ec.webp" class="md:w-[50%] h-auto z-20" alt="">
+
+        </section>
+    </div>
+
+    <!-- trust by customers section -->
+    <section class="mt-28">
+        <h1 class="font-lato text-4xl text-center tracking-wider font-extrabold">Trust by overs 20,000 Partners</h1>
+
+
+        <div class="mt-12 flex items-center justify-center gap-x-16 gap-y-4 flex-wrap">
+            <img class="w-28" src="/assets/Airbnb_Logo_Bélo.fed991f2.svg" alt="">
+            <img class="w-28" src="/assets/cdnlogo.com_treehouse.0cd45f2e.svg" alt="">
+            <img class="w-28" src="/assets/framer-ar21.a5c94bb2.svg" alt="">
+            <img class="w-28" src="/assets/Opendoorlogo.9c73e308.svg" alt="">
+            <img class="w-28" src="/assets/The_Himalaya_Drug_Company_logo.8767d43c.svg" alt="">
+            <img class="w-28" src="/assets/patnjali.9e0fd87d.svg" alt="">
+        </div>
+    </section>
+
+    <!-- story section -->
+    <section
+        class="flex flex-wrap justify-center items-center md:justify-around lg:justify-center gap-16 px-[8%] mt-24 pt-12 pb-8 md:pt-[8rem] bg-white">
+        <div class="relative max-w-[550px]">
+            <img src="/assets/farm.4ba5c5f3.webp"
+                class="w-[90%] min-h-[450px] sm:min-h-[700px] md:min-h-[700px] rounded-tl-[100rem] rounded-tr-[25rem] rounded-b-[100rem] shadow-2xl"
+                alt="">
+            <span
+                class="absolute top-[45%] whitespace-nowrap left-[100%] -translate-x-[100%] text-xl md:text-3xl font-semibold text-white font-serif bg-[rgba(255,255,255,.4)] px-8 py-7 rounded-3xl shadow-2xl backdrop-blur-md">Since
+                1986</span>
+        </div>
+
+        <div class="relative max-w-[500px]">
+            <img src="data:image/webp;base64,UklGRtgEAABXRUJQVlA4WAoAAAAQAAAAPAAAPAAAQUxQSIwBAAABkCIAkBo4c6RYsaJiVD1GlSGqqFgxRRU9RpWiDhXTqlJUKapMCqOOVh1NYXHmAxExAeA16P/4KAS2/YiYsYkREeUmLs//w5TLpKJYy+MEqvt4jGjesNguNbKVQz/qr3P4aPCcwfY5AzxB7y6aCnLBd6OCXCean6CWW4wQq5AWMqJ1HW37aWVWH0mdReu5kFJmh52ELqHLG1Q29c05wXQ7gTD9iO6LkcDP8f4C/U72n3B24lGBFCdF7CC4/hzp5teXG63pezOJtOfydLlqT+d35Pi9MwJYLpCtfB4myPmRYPUmmePUB/2MRpYDxNkki+/iBKjPijlicyMn6sA0GvlOqBAR2EfpNxLfkhAcL+98Iz3N5Wk9+KyMn3vILrWC/7OP5tzkh4DoQRdzl4Bu7qAfCJ9wEFGC51YfgXRs1UmrZdJCBrQgtxgB4p0WJ6jVfzOaBPJ3jTJ6oVFMD74bZMBwxOASh2hOI5dzgBHNG2B5QpPyqJhUFAEPyBSdwDRWbOcCfYgogG1lIpLlfgBWUDggJgMAAPAUAJ0BKj0APQA+IQyEQiGG/AYAgS2AGSGgB1CU9+X/hz+QHTlbQ9nf21/xeXZ+Ffn/+0+3TtAeYB+lP+o6iPmA/XL9pOwt6AH9L/w/WjegB5Z3sg/uN6S+YgdnX2q/sA4IPF9EDhw/u3gDGAMw75X/pPYK6PTR7eWCQir5FySCgjHCkwz1mvgMo+zSxUN2aoPauFOEC/+mQn1ooNpdOAG/72U52o6mAljdwWZL8CiYAP7/o967wFbTEujh9bpGeZ00rbsC3I0Pt4CrpvbIj5lh4ERHr/5etVrVwxMZQjnnJakd6Y5MliF25Qs9/otnHnmpn6QJS+rWr5fSqcViywjdfntSVKY253vYY0G62opWjLBR7E+w1pBC0Mq+bNi/DdyuRz/jP8Ej9PjSzU8C42zG88dcs5LoEhRzkgJQ9SUQAcwy576uNGE1QoISl/7vB0WixH4D88W6cMhAW1p+LWvNZKnZB7Q5AR7cnw7/TVXHZYsj1LDdhnW7w+KJFLNE/ycV1L+ke75HzmK+yLS6UN5J/gDAjf5yDp9VAisy0FV9/II4u9/1tD2cjd0is4TBfB2ynwXsq23xDMJhCymmE82lL2UTsUt3o9h64GX/pL413NQp3nz+TlgBlJpMG0gWbcjCK5mWuHZJs1TGVAsa9Ji3/WBj135pjHessFSiIrQPN3EsOy0KgjgMwBfz7mA6nioxknHrdakGTFaoDHO6tLHlFQGtDwKFrTE3fhLosiBIPAatt/Dw+ypD7UdOjz85XrJn3N2/vsWNrLB12hDiVC0+aPWrN7vkjXHNSzJTtC5Y/Z9kHx4xR0ooQBU+sQrvAspe1WrhD03AuV5Na2DzPzC58QRWZbDUNz/JwIuxXTNFHZvnCmTxC9OqrUOb0e2lxPkdozS5RhVLSy/t4sxDYAIZSaYC4hYvI5fsKuNbXS5Vcw6UhKo4udHQBw7A61ek5WbTgKDhMXzBG3MVxhL9DEUg7N4dTpYuSQPpIFy5nUhVEdDcbD0rdividx/6y68wLyg7Wf5edwhA2BxeOWuced5oDukEKxiKhxjYO70j9DINCeLuhgAA" class="absolute -top-24 ml-[80%]" alt="">
+            <h1 class="font-lato text-4xl md:text-5xl tracking-wider font-extrabold text-center md:text-left">Our story
+            </h1>
+            <p class="text-md font-medium max-w-[500px] text-justify  md:text-left mt-12 text-[#8a8a8a] indent-8">
+                A major portion of our diet is dedicated to staple foods that come from wheat, rice, corn, pulses,
+                potato, oats, cassava, sorghum, millets etc. The scale and outreach of agricultural crops is key to
+                feeding 9.6 billion people sustainably by 2050. However, the lack of protein quality and quantity in
+                agricultural products must be addressed first.
+            </p>
+            <p class="mt-8 text-md font-medium max-w-[500px] text-justify  md:text-left text-[#8a8a8a] indent-8"> Cella
+                Farms, we harness the power of fermentation to enrich agricultural products with complete protein and
+                make them nutritionally balanced. Our mission is to deliver the best tasting nutritious products for all
+                eating occassions, that are right for our entire family and for planet earth.</p>
+
+            <button class="mt-12 bg-green text-white px-6 py-4  md:px-12 md:py-5 rounded-[50px]">Learn More</button>
+        </div>
+    </section>
+
+    <!-- product section -->
+    <section class="mt-24 px-[8%] pb-8">
+        <h1 class="font-lato text-4xl text-center tracking-wider font-extrabold">Our Feature Product</h1>
+        <h4 class="mt-5 mx-auto max-w-[600px] font-sarif text-[#919191] text-xl text-center font-medium">we have wide
+            range of agriculture products that we exported all over the world to thousands of our parrtners</h4>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4    gap-6 place-content-center mt-12">
+
+            <div
+                class="flex flex-col gap-6 items-center lg:max-w-[300px] px-5 py-10 bg-white rounded-[50px] xl shadow-xl">
+                <img class="w-[100px] h-[100px] rounded-[40px]" src="/assets/wheat.3f5f1289.webp" alt="">
+                <h1 class="text-xl font-bold">Wheat</h1>
+                <p class="max-w-[220px] text-center text-md text-[#929292] font-medium">
+                    Our wheat is of high quality by planting organically without chemical fertilizers. Our wheat is high
+                    in fiber and carbohydrates
+                </p>
+            </div>
+            <div
+                class="flex flex-col gap-6 items-center lg:max-w-[300px] px-5 py-10 bg-white rounded-[50px] xl shadow-xl">
+                <img class="w-[100px] h-[100px] rounded-[40px]" src="/assets/rise.3610934e.webp" alt="">
+                <h1 class="text-xl font-bold">Rice</h1>
+                <p class="max-w-[220px] text-center text-md text-[#999999] font-medium">
+                    Our wheat is of high quality by planting organically without chemical fertilizers. Our wheat is high
+                    in fiber and carbohydrates
+                </p>
+            </div>
+            <div
+                class="flex flex-col gap-6 items-center lg:max-w-[300px] px-5 py-10 bg-white rounded-[50px] xl shadow-xl">
+                <img class="w-[100px] h-[100px] rounded-[40px]" src="/assets/pumpkin.9c3450d7.webp" alt="">
+                <h1 class="text-xl font-bold">Pumpkin</h1>
+                <p class="max-w-[220px] text-center text-md text-[#999999] font-medium">
+                    Our wheat is of high quality by planting organically without chemical fertilizers. Our wheat is high
+                    in fiber and carbohydrates
+                </p>
+            </div>
+            <div
+                class="flex flex-col gap-6 items-center lg:max-w-[300px] px-5 py-10 bg-white rounded-[50px] xl shadow-xl">
+                <img class="w-[100px] h-[100px] rounded-[40px]" src="/assets/veg.f7bca86f.webp" alt="">
+                <h1 class="text-xl font-bold">Vagetable</h1>
+                <p class="max-w-[220px] text-center text-md text-[#999999] font-medium">
+                    Our wheat is of high quality by planting organically without chemical fertilizers. Our wheat is high
+                    in fiber and carbohydrates
+                </p>
+            </div>
+        </div>
+
+        <a href="javascript:void(0)" class="mt-16 block text-center font-medium text-xl text-green">See all product</a>
+    </section>
+
+    <!-- trust our product -->
+    <section class="px-[8%] py-20 md:py-[5rem] bg-white flex flex-wrap items-center justify-center gap-24">
+        <div>
+            <h1 class="text-2xl md:text-5xl font-bold max-w-[550px] leading-tight">Thousand of people trust our
+                agricultural products</h1>
+            <p class="mt-12 text-[#8e8e8e] font-normal text-2xl max-w-[500px]">Join the amazing Farmer that we provide
+                for you and just you</p>
+
+            <div
+                class="mt-12 py-3 pl-8 bg-darkGreen text-[#f8fffd] flex flex-wrap flex-col gap-7  justify-around items-start md:flex-row rounded-3xl shadow-2xl">
+                <div>
+                    <h1 class="text-2xl font-bold">20,000 + </h1>
+                    <p class="text-[#b5d0bf]">People join with us</p>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold">20 +</h1>
+                    <p class="text-[#b5d0bf]">Countries cooperated with us</p>
+                </div>
+                <button
+                    class="bg-[#55f08c] text-black text-xl px-14 py-3 md:text-3xl md:flex items-center justify-center md:px-6 md:py-6 rounded-3xl">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="relative">
+            <img src="/assets/0_road_in_farm.5dbf9edd.jpg"
+                class="max-w-[100%] h-[450px] md:h-[600px] rounded-t-[3rem] rounded-tr-[7rem] rounded-b-[3rem] md:rounded-tl-[5rem] md:rounded-tr-[13rem] md:rounded-b-[5rem]"
+                alt="">
+            <span
+                class="absolute top-[45%] whitespace-nowrap left-0 -translate-x-[20%] text-xl md:text-3xl font-semibold text-white font-serif bg-[rgba(255,255,255,.4)] px-8 py-7 rounded-3xl shadow-2xl backdrop-blur-md">Join
+                Now</span>
+        </div>
+
+    </section>
+
+    <footer class="px-[8%] py-10 min-h-[65vh] w-full flex flex-wrap gap-8 items-center justify-between bg-cover bg-center" style="   background:linear-gradient(0deg, rgba(0, 0, 0, 0.528), rgba(0, 0, 0, 0.146)), url('/assets/footer__bg.0e1bf38f.webp');
+    background-size:cover;">
+
+        <div>
+            <h1 class="text-white text-5xl font-medium">Get information about us</h1>
+            <P class="mt-8 text-white text-2xl font-normal">Whar are you looking of? let's join us!</P>
+
+
+            <div
+                class="w-full bg-[#fafafa] mt-14 rounded-[40px]  shadow-xl shadow-slate-800/10 flex flex-none justify-between items-center">
+                <input type="email" name="search" placeholder="Email"
+                    class="border-none w-[100%] px-4 py-4 md:px-12 md:py-5 rounded-[50px] text-[#6b6b6b] font-medium bg-[#fafafa] placeholder:text-[#6b6b6b] placeholder:font-medium focus:ring-0">
+                <button class="bg-green text-white px-6 py-4  md:px-12 md:py-5 rounded-[50px]">Search</button>
+            </div>
+        </div>
+
+        <div class="flex w-full sm:w-auto items-center justify-center gap-8">
+            <a href="#" class="text-4xl text-white"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#" class="text-4xl text-white"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#" class="text-4xl text-white"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+
+    </footer>
+
+    <!-- flowbite script cdn -->
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
+    <!-- ion icon cdn -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</body>
+
+</html>
